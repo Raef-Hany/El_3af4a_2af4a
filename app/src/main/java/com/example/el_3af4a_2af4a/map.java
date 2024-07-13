@@ -61,6 +61,7 @@ public class map extends AppCompatActivity implements SensorEventListener {
                 getSharedPreferences("osmdroid_preferences", MODE_PRIVATE));
 
         mapView = findViewById(R.id.map);
+        mapView.setMultiTouchControls(true);
         mapView.setTileSource(TileSourceFactory.MAPNIK);
         mapController = (MapController) mapView.getController();
         mapController.setZoom(15.0); // Set initial zoom level
